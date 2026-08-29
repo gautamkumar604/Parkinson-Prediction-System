@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Parkinson's Prediction System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container nav">
+            <div class="logo">
+                Parkinson<span>Predict</span>
+            </div>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#prediction">Prediction</a>
+                <a href="#about">About</a>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+
+                <div class="hero-text">
+                    <p class="badge">AI-Powered Health Prediction</p>
+
+                    <h1>
+                        Parkinson's Disease
+                        <span>Prediction System</span>
+                    </h1>
+
+                    <p>
+                        Analyze voice-related measurements using a
+                        machine learning model to predict the possibility
+                        of Parkinson's disease.
+                    </p>
+
+                    <a href="#prediction" class="primary-btn">
+                        Start Prediction
+                    </a>
+                </div>
+
+                <div class="hero-card">
+                    <div class="brain-icon">🧠</div>
+                    <h3>Machine Learning</h3>
+                    <p>Random Forest Classification</p>
+
+                    <div class="accuracy">
+                        <strong>94.87%</strong>
+                        <span>Test Accuracy</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Prediction Section -->
+        <section id="prediction" class="prediction-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="badge">Prediction</p>
+
+                    <h2>Enter Patient Voice Features</h2>
+
+                    <p>
+                        Enter the 22 measurements required by the trained
+                        machine learning model.
+                    </p>
+                </div>
+
+
+                <form id="predictionForm">
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+                            <label for="fo">MDVP:Fo(Hz)</label>
+                            <input type="number" id="fo" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="fhi">MDVP:Fhi(Hz)</label>
+                            <input type="number" id="fhi" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="flo">MDVP:Flo(Hz)</label>
+                            <input type="number" id="flo" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="jitter">MDVP:Jitter(%)</label>
+                            <input type="number" id="jitter" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="jitterAbs">MDVP:Jitter(Abs)</label>
+                            <input type="number" id="jitterAbs" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="rap">MDVP:RAP</label>
+                            <input type="number" id="rap" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="ppq">MDVP:PPQ</label>
+                            <input type="number" id="ppq" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="ddp">Jitter:DDP</label>
+                            <input type="number" id="ddp" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="shimmer">MDVP:Shimmer</label>
+                            <input type="number" id="shimmer" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="shimmerDb">MDVP:Shimmer(dB)</label>
+                            <input type="number" id="shimmerDb" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="apq3">Shimmer:APQ3</label>
+                            <input type="number" id="apq3" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="apq5">Shimmer:APQ5</label>
+                            <input type="number" id="apq5" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="apq">MDVP:APQ</label>
+                            <input type="number" id="apq" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="dda">Shimmer:DDA</label>
+                            <input type="number" id="dda" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="nhr">NHR</label>
+                            <input type="number" id="nhr" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="hnr">HNR</label>
+                            <input type="number" id="hnr" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="rpde">RPDE</label>
+                            <input type="number" id="rpde" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="dfa">DFA</label>
+                            <input type="number" id="dfa" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="spread1">spread1</label>
+                            <input type="number" id="spread1" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="spread2">spread2</label>
+                            <input type="number" id="spread2" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="d2">D2</label>
+                            <input type="number" id="d2" step="any" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="ppe">PPE</label>
+                            <input type="number" id="ppe" step="any" required>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button type="submit" class="primary-btn">
+                            Predict Parkinson's
+                        </button>
+
+                        <button type="reset" class="secondary-btn">
+                            Clear
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <!-- Loading -->
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Analyzing patient data...</p>
+                </div>
+
+
+                <!-- Result -->
+                <div id="result" class="result-card hidden">
+
+                    <h2>Prediction Result</h2>
+
+                    <div id="resultStatus"></div>
+
+                    <div class="probability-container">
+
+                        <div class="probability-box">
+                            <span>Class 0 Probability</span>
+                            <strong id="class0Probability">0%</strong>
+                        </div>
+
+                        <div class="probability-box">
+                            <span>Class 1 Probability</span>
+                            <strong id="class1Probability">0%</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="badge">About</p>
+
+                    <h2>About This System</h2>
+
+                    <p>
+                        This project uses machine learning techniques to
+                        analyze biomedical voice measurements and classify
+                        the input into one of two classes.
+                    </p>
+                </div>
+
+                <div class="info-grid">
+
+                    <div class="info-card">
+                        <h3>🤖 Model</h3>
+                        <p>Random Forest Classifier</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>📊 Features</h3>
+                        <p>22 voice measurement features</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🎯 Accuracy</h3>
+                        <p>94.87% test accuracy</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            Parkinson's Prediction System |
+            Machine Learning Project
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
