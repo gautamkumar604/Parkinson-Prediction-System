@@ -5,7 +5,13 @@ import numpy as np
 import os
 
 app = Flask(__name__)
-CORS(app)
+CORS(
+    app,
+    resources={r"/*": {"origins": "*"}},
+    methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["Content-Type", "Authorization"],
+    supports_credentials=False,
+)
 # Load trained model and scaler
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -20,8 +26,11 @@ def home():
     })
 
 
-@app.route("/predict", methods=["POST"])
+@app.route("/predict", methods=["POST", "OPTIONS"])
 def predict():
+
+    if request.method == "OPTIONS":
+        return jsonify({}), 200
 
     data = request.get_json()
 
